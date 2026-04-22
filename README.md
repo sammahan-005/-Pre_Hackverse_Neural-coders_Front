@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# 🎓 StudyHub - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **StudyHub** frontend! This is a premium, high-performance web application designed for academic mutual aid. It features a modern, glassmorphic design system and a seamless user experience for managing academic requests and community knowledge sharing.
 
-Currently, two official plugins are available:
+[![React](https://img.shields.io/badge/React-19.0-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![React Router](https://img.shields.io/badge/React_Router-7.0-CA4245?style=for-the-badge&logo=react-router)](https://reactrouter.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Interactive Feed**: A dynamic, real-time feed of academic requests with intelligent sorting (Priority Score).
+- **Request Lifecycle**: Full management of academic problems — from publication to "Best Answer" selection.
+- **Reputation Dashboard**: Personal user profiles featuring reputation breakdown, statistics, and favorite subjects.
+- **Real-time Interaction**: Integrated voting system (Upvote/Downvote) for quality control.
+- **Premium UX**: 
+  - **Glassmorphism Design**: Sleek, modern interface with subtle transparency and blur effects.
+  - **Loading Skeletons**: Smooth perceived performance with custom-built skeleton loaders.
+  - **Theming**: Full support for Dark/Light modes based on user preference.
+  - **Responsive Layout**: Optimized for both desktop and mobile viewing.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router 7](https://reactrouter.com/en/main)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **API Client**: Axios
+- **Styling**: Vanilla CSS with custom design tokens (Academic Indigo theme).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Quick Start
+
+### 1. Prerequisites
+Ensure you have the [StudyHub Backend](file:///home/mahan-samuel/Bureau/Projets/Hackathon/Api_hackathon) running first.
+
+### 2. Installation
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Environment Setup
+The frontend expects the API to be running at `http://localhost:3333`. You can configure this in your API utility files.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 Project Structure
+
+- `src/api`: API service layer and Axios interceptors.
+- `src/components`: Reusable UI components (Buttons, Modals, Cards, Skeletons).
+- `src/context`: React Context for Authentication and global state.
+- `src/pages`: Main application views (Feed, Profile, RequestDetail).
+- `src/styles`: Global styles, CSS variables, and design tokens.
+- `src/types`: TypeScript interfaces and type definitions.
+
+---
+
+## 🎨 Design System
+
+StudyHub uses a custom design system based on an **Academic Indigo & Amber** palette.
+
+- **Primary**: Indigo (`#6366f1`) - Trust and Academic focus.
+- **Secondary**: Amber (`#f59e0b`) - Attention and Achievement.
+- **Background**: Deep Space (`#0c0f1a`) for Dark Mode.
+- **Glass**: Semi-transparent overlays with `backdrop-filter: blur(12px)`.
+
+---
+
+Made with ❤️ for the Hackathon.
+
